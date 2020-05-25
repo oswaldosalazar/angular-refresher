@@ -30,14 +30,11 @@ export class ProductsComponent implements OnInit {
   }
 
   addProduct(form) {
-    console.log(form.value.productName);
-
     if (form.valid) {
       // this.products.push(form.value.productName);
       this.ProductsService.addProduct(form.value.productName);
     }
     form.resetForm();
-    console.log(form.value.productName);
   }
 
   removeProduct(productName: string) {
